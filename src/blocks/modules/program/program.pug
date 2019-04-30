@@ -1,0 +1,15 @@
+include ../../components/title-section/title-section
+include ../../components/button/button
+
+section.program.section
+  ._content
+    ._container.container
+      ._texts
+        +title-section('Для жительниц Республики Марий Эл БЕСПЛАТНО по полису ОМС')
+        ._desc
+          p Материал берется просто, быстро и безболезненно в кабинете у акушера-гинеколога
+          p Исследования производятся на автоматизированных системах, что обеспечивает высокую точность результата
+          p Безопасность метода. Материал забирается в специальный консервант, не токсичен.
+        +button('Посмотреть адреса поликлиник', './docs/Polikliniki_Mariy_El.pdf', 'button-type1', true)
+  .program__bg
+    img(src='./img/program.png').program__bg-img   

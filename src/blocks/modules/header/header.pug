@@ -1,0 +1,12 @@
+include ../../components/button/button
+
+.contraindications
+  ._container.container
+    ._wrap Имеются противопоказания, необходима консультация специалиста
+header.header
+  .header-main
+    .container
+      .header-main__row
+        include ../logo/logo
+        include ../top-menu/top-menu
+        +button('Где можно пройти', "./docs/Polikliniki_Mariy_El.pdf", '', true)

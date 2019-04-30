@@ -1,0 +1,22 @@
+.team {
+  &__slider {
+    @include row-offset();
+    &-item {
+      @include col-offset();
+      text-align: center;
+      &__img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 30px;
+      }
+      &__title {
+        color: $color-primary;
+        font-size: $sub-title-size;
+        margin-bottom: 5px;
+      }
+      &__work {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

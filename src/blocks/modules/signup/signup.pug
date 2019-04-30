@@ -1,0 +1,27 @@
+include ../../components/title-section/title-section
+include ../../components/button/button
+
+mixin signup-item(text, img)
+  .signup__item
+    .signup__item-wrap
+      .signup__item-circle
+        img(src=img, alt="")
+      .signup__item-text= text
+
+section.signup.section#signup
+  ._container.container
+    +title-section('Как записаться?')
+    ._desc Скачать памятку перед проведением анализа и заполнить направление.
+    ._row
+      +signup-item('Выбрать из списка медицинскую организацию по месту жительства', './img/signup1.png')
+      +signup-item('Обратиться в регистратуру', './img/signup2.png')
+      +signup-item('Записаться к гинекологу с целью проведения анализа', './img/signup3.png')
+      +signup-item('Скачать памятку перед проведением анализа', './img/signup4.png')
+    ._buttons
+      ._buttons-row
+        ._buttons-item
+          +button('Выбрать поликлинику', './docs/Polikliniki_Mariy_El.pdf', '', true)
+        ._buttons-item
+          +button('Скачать направление', './docs/Napravlenie.pdf', '', true)
+        ._buttons-item
+          +button('Скачать памятку', './docs/Chto_vazhno_znat_zhenschine_o_svoem_zdorovye.pdf', '', true)

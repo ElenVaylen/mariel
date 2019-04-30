@@ -1,0 +1,109 @@
+.contacts {
+  color: $color-second;
+  background-image: url('../img/contacts.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  &__info {
+    &-row {
+      @include flex();
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+    &-item {
+      width: 270px;
+      @media (max-width:$tablet) {
+        width: 210px;
+      }
+      &__wrap {
+        position: relative;
+        @include flex();
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      &__icon {
+        width: 104px;
+        height: 104px;
+        border-radius: 100%;
+        background: $color-blue;
+        margin-bottom: 25px;
+        @include flex();
+        align-items: center;
+        justify-content: center;
+        @media (max-width:$tablet) {
+          width: 70px;
+          height: 70px;
+        }
+        img {
+          @media (max-width:$tablet) {
+            max-width: 36px;
+            max-height: 40px;
+          }
+        }
+      }
+      &__text {
+        font-weight: 600;
+        font-size: $sub-title-size;
+        line-height: 1.2;
+        @media (max-width:$tablet) {
+          font-size: 16px;
+        }
+        a {
+          color: $color-second;
+        }
+      }
+    }
+  }
+}
+.feedback {
+  max-width: 1035px;
+  margin: auto;
+  margin-top: 75px;
+  @media (max-width:$tablet) {
+    margin-top: 45px;
+    max-width: 650px;
+  }
+  &__row {
+    @include flex-row();
+  }
+  &__col {
+    @include col-p();
+  }
+  &__field {
+    @include col-bottom();
+    width: 100%;
+    border-radius: 10px;
+    background-color: $color-second;
+    height: 84px; 
+    border: 2px solid $color-second;
+    font-size: $sub-title-size;
+    padding: 20px;
+    outline: none;
+    @media (max-width:$tablet) {
+      height: 54px;
+      font-size: 17px;
+      padding: 15px;
+    }
+    &::placeholder {
+      color: $color-primary;
+    }
+    &:focus {
+      border-color: $color-button;
+    }
+    &.error {
+      border-color: $color-error;
+    }
+  }
+  textarea.feedback__field {
+    height: 300px;
+    @media (max-width:$tablet) {
+      height: 200px;
+    }
+  }
+  &__button {
+    &-row {
+      @include flex();
+      justify-content: flex-end;
+    }
+  }
+}

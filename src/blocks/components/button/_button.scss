@@ -1,0 +1,61 @@
+.button {
+  outline: none;
+  font-size: 24px;
+  font-weight: normal;
+  height: 60px;
+  width: auto;
+  min-width: 360px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-first;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: $color-primary;
+  background: linear-gradient(to right, $color-contsrast2 0%, $color-contsrast 100%);
+  border-radius: 40px;
+  box-shadow: 0px 13px 20px 4.94px rgba(224, 60, 117, 0.28);
+  padding: 0 40px;
+  @media (max-width:$laptop-xl) {
+    padding: 0 20px;
+    min-width: 280px;
+    font-size: 20px;
+    height: 50px;
+  }
+  @media (max-width: $laptop-s) {
+    font-size: $title-size2;
+    padding: 0 15px;
+    min-width: 200px;
+    font-size: 16px;
+    height: 42px;
+    box-shadow: 0px 9px 16px 4.94px rgba(224, 60, 117, 0.28);
+  }
+  @media (max-width:$tablet) {
+    box-shadow: 0px 5px 10px 3px rgba(155, 67, 98, 0.18);
+  }
+  @media (max-width:$mobile-xl) {
+    font-size: 20px;
+    min-width: 160px;
+    font-size: 14px;
+    height: 35px;
+  }
+  &:hover {
+    background: linear-gradient(to right, darken($color: $color-contsrast2, $amount: 10%) 0%, darken($color: $color-contsrast, $amount: 10%) 100%);
+  }
+  &-type1 {
+    font-size: 30px;
+    height: 70px;
+    min-width: 380px;
+    @media (max-width:$laptop-xl) {
+      font-size: 22px;
+      height: 52px;
+      min-width: 300px;
+    }
+    @media (max-width: $laptop-s) {
+      font-size: 18px;
+      height: 45px;
+      min-width: 220px;
+    }
+  }
+}

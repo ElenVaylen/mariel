@@ -1,0 +1,54 @@
+.header {
+  &-main {
+    position: relative;
+    background-color: $color-grey;
+    &__row {
+      @include flex();
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 0;
+      @media (max-width: $laptop-xl) {
+        padding: 35px 0;
+      }
+      @media (max-width: $laptop-s) {
+        padding: 28px 0;
+      }
+      @media (max-width:$tablet) {
+        padding: 24px 0;
+      }
+      @media (max-width:$mobile-xl) {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+.contraindications {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  background: $color-second;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 9px 17px 3px;
+  &__wrap {
+    padding: 10px 0;
+    color: $color-primary;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    @media (max-width:$laptop-s) {
+      font-size: 20px;
+    }
+    @media (max-width:$tablet) {
+      font-size: 16px;
+    }
+    @media (max-width:$mobile-s) {
+      font-size: 14px;
+    }
+    @media (max-width:$mobile-xs) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.logo {
+  display: none;
+  &-link {
+    font-size: 40px;
+    color: $color-primary;
+  }
+  @media (max-width:$laptop-xl) {
+    max-width: 160px;
+  }
+  @media (max-width:$laptop-s) {
+    max-width: 100px;
+  }
+}

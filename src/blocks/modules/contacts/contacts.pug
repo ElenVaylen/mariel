@@ -1,0 +1,39 @@
+include ../../components/title-section/title-section
+include ../../components/desc-section/desc-section
+include ../../components/button/button
+
+mixin contacts-item(icon, text1, text2, link)
+  .contacts__info-item
+    .contacts__info-item__wrap
+      .contacts__info-item__icon
+        img(src= icon)
+      p.contacts__info-item__text
+        if(link)
+          a(href="#")= text1
+        else
+          = text1
+      p.contacts__info-item__text
+        if(link)
+          a(href="#")= text2
+        else
+          = text2
+
+section.contacts.section
+  ._container.container
+    +title-section('Contact Us')
+    +desc-section('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam')
+    ._info
+      ._info-row
+        +contacts-item('./img/contacts1.png', 'Nobinagar savar,Dhaka Bangladesh')
+        +contacts-item('./img/contacts2.png', '+8801743331996', '+8801928737807', true)
+        +contacts-item('./img/contacts3.png', 'quickmasud@gmail.com', 'quickmasud@yahoo.com', true)
+      form._form.feedback(action="")
+        .feedback__row
+          .feedback__col
+            input.feedback__field(type="text" placeholder="Your name")
+          .feedback__col
+            input.feedback__field(type="email" placeholder="Your email")
+        textarea.feedback__field(name="" placeholder="Write Massage")
+        .feedback__button
+          .feedback__button-row
+            +button('SEND', '#', 'button-type4', true)

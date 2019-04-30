@@ -1,0 +1,16 @@
+include ../../components/button/button
+mixin main-slider__item(src)
+  .main-slider__item
+    .main-slider__bg
+      img(src=src, alt="")
+
+section.main-slider
+  ._init
+    +main-slider__item('./img/main-slider1.png')
+  ._content
+    ._container.container
+      h1._title Забота Республики Марий Эл<br> о женском здоровье 
+      p._description Бесплатный анализ<br> по методу жидкостной цитологии<br> с применением европейской<br> технологии обследования
+      +button('Скачать памятку', './docs/Chto_vazhno_znat_zhenschine_o_svoem_zdorovye.pdf', 'button-type1', true)
+      ._bot В соответствии с <a href="./docs/Prikaz.pdf" target="_blank">приказом</a> <br> Министерства Здравоохранения<br> Республики Марий Эл №607 от 3 апреля 2019г.
+

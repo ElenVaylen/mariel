@@ -1,0 +1,18 @@
+mixin footer-menu__item(title, link)
+  .footer-menu__item
+    a.footer-menu__link(href=link)= title
+
+footer.footer
+  ._main
+    ._container.container
+      ._main-row
+        ._phone
+          p._phone-text Телефон горячей линии:
+          p 
+            a(href="tel:89179253885") +7 917 92 53 885
+        .footer-copyright
+          .footer-copyright__item
+            a(href="http://www.foxdesign.ru/" target="_blank").footer-copyright__link
+              img(src="./img/copyright.png", alt="")
+          .footer-copyright__item
+            a.footer-copyright__mail(href="mailto:Foxdesign116@yandex.ru") Foxdesign116@yandex.ru

@@ -1,0 +1,184 @@
+.about {
+  padding-bottom: 0;
+  .title-section {
+    padding-left: 140px;
+    margin-bottom: 90px;
+    &:before {
+      content: '3';
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background: linear-gradient(to top, $color-contsrast2 0%, $color-contsrast 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-second;
+      position: absolute;
+      top: -11px;
+      left: 0;
+      font-weight: normal;
+      @media (max-width: $laptop-xl) {
+        width: 80px;
+        height: 80px;
+      }
+      @media (max-width: $laptop-s) {
+        width: 70px;
+        height: 70px;
+      }
+      @media (max-width:$tablet) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    @media (max-width: $laptop-xl) {
+      padding-left: 120px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: $laptop-s) {
+      padding-left: 100px;
+    }
+    @media (max-width:$mobile-xl) {
+      padding-left: 80px;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-top: 60px;
+    @media (max-width: $laptop-s) {
+      margin-top: 50px;
+    }
+    @media (max-width:$tablet) {
+      margin-top: 40px;
+    }
+    &-wrap {
+      position: relative;
+      padding-left: 150px;
+      @media (max-width: $laptop-xl) {
+        padding-left: 120px;
+      }
+      @media (max-width: $laptop-s) {
+        padding-left: 100px;
+      }
+      @media (max-width:$mobile-xl) {
+        padding-left: 80px;
+      }
+
+    }
+    &-icon {
+      position: absolute;
+      color: $color-grey2;
+      top: 0;
+      left: 0;
+      font-weight: 900;
+      font-size: 130px;
+      @media (max-width: $laptop-xl) {
+        font-size: 100px;
+      }
+      @media (max-width: $laptop-s) {
+        font-size: 80px;
+      }
+      @media (max-width:$mobile-xl) {
+        font-size: 70px;
+      }
+    }
+    &-title {
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      @media (max-width: $laptop-xl) {
+        font-size: 30px;
+      }
+      @media (max-width: $laptop-s) {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      @media (max-width:$tablet) {
+        font-size: 24px;
+      }
+      @media (max-width:$mobile-xl) {
+        font-size: 20px;
+      }
+    }
+    &-desc{
+      font-size: 32px;
+      max-width: 90%;
+      font-weight: 300;
+      @media (max-width: $laptop-xl) {
+        font-size: 26px;
+      }
+      @media (max-width: $laptop-s) {
+        font-size: 22px;
+      }
+      @media (max-width:$tablet) {
+        font-size: 20px;
+      }
+      @media (max-width:$mobile-xl) {
+        font-size: 16px;
+      }
+      span {
+        color: $color-contsrast;
+      }
+    }
+
+  }
+}
+.section-bg {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  margin-top: 30px;
+  @media (max-width: $laptop-xl) {
+    height: 600px;
+    margin-top: 10px;
+  }
+  @media (max-width: $laptop-s) {
+    height: 400px;
+  }
+  @media (max-width:$mobile-xl) {
+    height: 255px;
+  }
+  &__content {
+    position: absolute;
+    top: -117px;
+    right: -79px;
+    left: -60px;
+    bottom: 89px;
+    margin: auto;
+    transform: rotate(5deg);
+    overflow: hidden;
+    width: 105%;
+    @media (max-width: $laptop-xl) {
+      height: 600px;
+      transform: rotate(2deg);
+    }
+    @media (max-width: $laptop-s) {
+      bottom: 132px;
+    }
+    @media (max-width:$mobile-xl) {
+      bottom: 252px;
+    }
+  }
+  &__img {
+    background-image: url(../img/section-bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -86px;
+    transform: rotate(-5deg);
+    margin: auto;
+    height: 800px;
+    @media (max-width: $laptop-xl) {
+      height: 600px;
+      transform: rotate(-2deg);
+    }
+    @media (max-width: $laptop-s) {
+      height: 400px;
+      bottom: -25px;
+    }
+    @media (max-width:$mobile-xl) {
+      height: 255px;
+    }
+  }
+}

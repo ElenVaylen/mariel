@@ -1,0 +1,11 @@
+mixin top-menu(name, link)
+  .top-menu__item
+    a(href=link).top-menu__link= name
+
+nav.top-menu
+  ._wrap
+    ._row
+      +top-menu('Женское здоровье', '#about')
+      +top-menu('Об анализе', '#screen')
+      +top-menu('Как записаться', '#signup')
+    

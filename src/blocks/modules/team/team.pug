@@ -1,0 +1,21 @@
+include ../../components/title-section/title-section
+include ../../components/desc-section/desc-section
+
+mixin slider-item(title, work, img)
+  .team__slider-item
+    img.team__slider-item__img(src=img)
+    .team__slider-item__title= title
+    .team__slider-item__work= work
+    include ../../components/social/social
+
+section.team.section
+  ._container.container
+    +title-section('Our Team Member')
+    +desc-section('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam')
+    ._slider
+      +slider-item('John Doe', 'General Manager', './img/team1.jpg')
+      +slider-item('Alexa Biru', 'Office Director', './img/team2.jpg')
+      +slider-item('Ronobir sing', 'Admin', './img/team3.jpg')
+      +slider-item('John Doe', 'General Manager', './img/team1.jpg')
+      +slider-item('Alexa Biru', 'Office Director', './img/team2.jpg')
+      +slider-item('Ronobir sing', 'Admin', './img/team3.jpg')
